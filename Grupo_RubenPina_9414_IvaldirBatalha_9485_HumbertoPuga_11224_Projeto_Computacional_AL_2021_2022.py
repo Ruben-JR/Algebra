@@ -3,9 +3,16 @@ import numpy as np
 #-------------------------------------------------------------Exercicio_1_2
 #Exercicio 1
 #--------------Alinea A de 1
-def  transposta():
-    print()
 
+#def dimensoes(A, B, C):
+ #   l, c = (A, B, C)
+  #  D = l for range []
+
+def  transposta(A, B, C):
+    l , c = dimensao(A, B, C)
+    T = [[0 for j in range [l]] for i in range[c]]     #inverter dimensoes
+    
+    return(T)
 #--------------Alinea B de 1
 def  traco():
     print()
@@ -29,7 +36,20 @@ def prod_mat():
 #Exercicio 2
 #--------------Testar as funcoes do exercico1 usando as matrizes do exercicio 2
 #--------------Funcao (a) de 1
-transposta()
+def imprimeMatriz(A):
+    return 
+
+def main():
+    A = [[1, 2, 3], [1, 3, 4], [2, 6, 7]]
+    B = [[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]]
+    C = [[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]]
+
+    print ("A: \nB: \nC: ")
+    imprimeMatriz(A, B, C)
+
+    print("T: ")
+    T = transposta(A, B, C)
+    imprimeMatriz(T)
 
 #--------------Funcao B de 1
 traco()

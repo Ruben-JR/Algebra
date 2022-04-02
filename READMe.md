@@ -10,19 +10,24 @@
 
 <h3>Technology used</h3>
 
-    1 - VSCode
-    2 - Python
+<div style="display: inline-block">
+    <img align="center" alt="vsCode-logo" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+    <img align="center" alt="python-logo" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+</div>
 
  <h3>Author</h3>
- 
 <p>Ruben de Pina</p>
- <p>Linkedin: https://www.linkedin.com/in/ruben-pina-3851b4235/</p>
- <p>email: rubenpina758@gmail.com</p>
-
+ <p><div>
+    <a href="mailto:rubenpina758@gmail.com" ><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+    <a href="https://www.linkedin.com/in/ruben-pina-3851b4235/" ><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+ </div></p>
+ 
 <p>Ivaldir Batalha</p>
- <p>Linkedin: https://www.linkedin.com/in/ivaldir-batalha-a67952185/</p>
- <p>GitHub: https://github.com/ivaldir301</p>
-
-<p>Humberto Puga</p>
-
-https://img.shields.io/badge/Status-In%20progress-yellow
+<p><div>
+    <a href="mailto:ivalbat1@gmail.com" ><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+ </div></p>
+ 
+ <p>Humberto Puga</p>
+ <p><div>
+    <a href="mailto:pugarosabal@gmail.com" ><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+ </div></p>
