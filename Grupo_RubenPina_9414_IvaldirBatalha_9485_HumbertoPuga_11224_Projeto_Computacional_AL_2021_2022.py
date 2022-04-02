@@ -1,140 +1,176 @@
 import numpy as np
 
-#-------------------------------------------------------------Exercicio_1_2
-#Exercicio 1
-#--------------Alinea A de 1
+#--------------------------Exercicio_1_2----------------------------
 
-#def dimensoes(A, B, C):
- #   l, c = (A, B, C)
-  #  D = l for range []
+#--------------------------Exercicio 1------------------------------
 
-def  transposta(A, B, C):
-    l , c = dimensao(A, B, C)
-    T = [[0 for j in range [l]] for i in range[c]]     #inverter dimensoes
+#Alinea A de 1
+def transposta(A):
     
-    return(T)
-#--------------Alinea B de 1
-def  traco():
-    print()
+    return 
+    
+#Alinea B de 1
 
-#--------------Alinea C de 1
-def traco_secundaria():
-    print()
-
-#--------------Alinea D de 1
-def soma_mat():
-    print()
-
-#--------------Alinea E de 1
-def mult_escalar_mat():
-    print()
-
-#--------------Alinea F de 1
-def prod_mat():
-    print()
-
-#Exercicio 2
-#--------------Testar as funcoes do exercico1 usando as matrizes do exercicio 2
-#--------------Funcao (a) de 1
-def imprimeMatriz(A):
+def traco():
     return 
 
-def main():
-    A = [[1, 2, 3], [1, 3, 4], [2, 6, 7]]
-    B = [[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]]
-    C = [[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]]
+#Alinea C de 1
 
-    print ("A: \nB: \nC: ")
-    imprimeMatriz(A, B, C)
+def traco_secundaria():
+    return
 
-    print("T: ")
-    T = transposta(A, B, C)
-    imprimeMatriz(T)
+#Alinea D de 1
 
-#--------------Funcao B de 1
-traco()
+def soma_mat():
+    return
 
-#--------------Funcao C de 1
-traco_secundaria()
+#Alinea E de 1
 
-#--------------Funcao D de 1
-soma_mat()
+def mult_escalar_mat():
+    return
 
-#--------------Funcao E de 1
-mult_escalar_mat()
+#Alinea F de 1
 
-#--------------Funcao F de 1
-prod_mat()    
+def prod_mat():
+    return
 
-#------------------------------------------------------------Exercicio_3_4
-#Exercicio 3
-#--------------Algoritmo 1 de 3
+#--------------------------Exercicio 2
+
+A = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
+B = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
+C = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
+
+def main(A, B, C):
+    M = []
+    linhas = len(M)
+    colunas = len(M[0])
+    for i in range[linhas]:
+        for j in range[colunas]:
+
+            #Funcao (a) de 1
+            transposta(A)
+            imprimeMatriz(A)
+
+            #Funcao B de 1
+            traco(A)
+            imprimeMatriz(A)
+
+            #Funcao C de 1
+            traco_secundaria(A)
+            imprimeMatriz(A)
+
+            #Funcao D de 1
+            soma_mat(A, B)
+            imprimeMatriz(A, B)
+
+            #Funcao E de 1
+            mult_escalar_mat(A)
+            imprimeMatriz(A)
+
+            #Funcao F de 1
+            prod_mat(A, B)  
+            imprimeMatriz(A)  
+
+
+#############################################
+
+def imprimeMatriz(M):
+    l, c = dimensao(M)
+    for i in range(l):
+        for j in range[c]:
+            print(M[i][j], end="\t")
+        print()
+
+#############################################
+
+def dimensao(M):
+    l = len(M)
+    c = len(M[0])
+    if (l != 0):
+        return l, c
+    return False 
+
+#--------------------------Exercicio_3_4
+#--------------------------Exercicio 3
+#Algoritmo 1 de 3
+
 def forma_escalonada():
-    print()
+    return
 
-#--------------Algoritmo 2 de 3
+#Algoritmo 2 de 3
+
 def forma_escalonada_reduzida_por_linha():
-    print()
+    return
 
-#--------------Alinea (a) de 3
+#Alinea (a) de 3
+
 def primeira_col_nao_nula():
-    print()
+    return
 
-#--------------Alinea (b) de 3
+#Alinea (b) de 3
+
 def troca_linhas():
-    print()
+    return
 
-#--------------Alinea (c) de 3
+#Alinea (c) de 3
+
 def cria_zeros():
-    print()
+    return
 
-#--------------Alinea (d) de 3
+#Alinea (d) de 3
+
 def elimina_linha_1():
-    print()
+    return
 
-#--------------Alinea (e) de 3
+#Alinea (e) de 3
+
 def forma_escalonada():
-    print()
+    return
 
-#--------------Alinea (f) de 3
+#Alinea (f) de 3
+
 def  forma_escalonada_reduzida():
-    print()
+    return
 
-#--------------Alinea (g) de 3
+#Alinea (g) de 3
+
 def gauss_jordan():
-    print()
+    return
 
-#Exercicio 4
-#--------------Teste a funcao gauss_jordan usando as matrizes de 4, dando uma especial atenção à matriz B
+#--------------------------Exercicio 4
+
 gauss_jordan()
 
-#-------------------------------------------------------------Exercicio_5_6
-#Exercicio 5
-# -------------Alinea (a) de 5
+#--------------------------Exercicio_5_6
+#--------------------------Exercicio 5
+#Alinea (a) de 5
+
 def posto():
-    print()
+    return
 
-#--------------Alinea (b) de 5
+#Alinea (b) de 5
+
 def sistema_eq_linear():
-    print()
+    return
 
-#Exercicio 6
-#--------------Testar  as funcoes de 5 
-# -------------Funcao (a) de 5
+#--------------------------Exercicio 6
+#Funcao (a) de 5
+
 posto()
 
-#--------------Funcao (b) de 5
+#Funcao (b) de 5
+
 sistema_eq_linear()
 
-#-------------------------------------------------------------Exercicio_7_8
+#--------------------------Exercicio_7_8
 #Exercicio 7
+
 def determinante():
-    print()
-    
-    forma_escalonada()
-    print()
+    return
+
+forma_escalonada()
 
 #Exercicio 8
-#--------------Testar a funcao de 7 usando as matrizes de 8
-#--------------Funcao de 7
+#Funcao de 7
+
 determinante()
