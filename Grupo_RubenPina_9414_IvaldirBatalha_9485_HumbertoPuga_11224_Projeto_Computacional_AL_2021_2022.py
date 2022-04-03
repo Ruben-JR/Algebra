@@ -7,6 +7,7 @@ import numpy as np
 #Alinea A de 1
 
 def transposta(A):
+
     return 
 
 #Alinea B de 1
@@ -21,9 +22,23 @@ def traco_secundaria():
 
 #Alinea D de 1
 
-def soma_mat():
-    return
-
+def soma_mat(A, B):
+    if(dimensao(A) != dimensao(B)):   
+        return False
+    else:
+        linhas, colunas = dimensao(A)
+        C = [[0 for j in range(colunas)] for i in range(linhas)]
+        print(C)     
+        
+        
+        """
+        for i in range(linhas):
+            C.append([])
+            for j in range(colunas):
+                soma = A[i][j] + B[i][j]
+                C[i].append(soma)
+        return C
+"""
 #Alinea E de 1
 
 def mult_escalar_mat():
@@ -47,9 +62,9 @@ def imprimeMatriz(M):
 
 def dimensao(M):
     l = len(M)
-    c = len(M[0])
+    c = len(M)
     if (l != 0):
-        return l, c
+        print(l, 'x', c)
     return False 
 
 def main():
@@ -57,39 +72,43 @@ def main():
     B = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
     C = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
 
-    M = []
-    linhas = len(M)
-    colunas = 0
-    for i in range[linhas]:
-        for j in range[colunas]:
+    #Funcao (a) de 1
+    print("A: ")
+    transposta(A)
+    imprimeMatriz(A)
 
-            #Funcao (a) de 1
-            transposta(A[i][j])
-            imprimeMatriz(A[i][j])
-"""
-            #Funcao B de 1
-            traco(A)
-            imprimeMatriz(A)
+    #Funcao B de 1
+    print("A: ")
+    traco(A)
+    imprimeMatriz(A)
 
-            #Funcao C de 1
-            traco_secundaria(A)
-            imprimeMatriz(A)
+    #Funcao C de 1
+    print("A: ")
+    traco_secundaria(A)
+    imprimeMatriz(A)
 
-            #Funcao D de 1
-            soma_mat(A, B)
-            imprimeMatriz(A, B)
+    #Funcao D de 1
+    print("A: ")
+    imprimeMatriz(A)
 
-            #Funcao E de 1
-            mult_escalar_mat(A)
-            imprimeMatriz(A)
+    print("B: ")
+    imprimeMatriz(B)
 
-            #Funcao F de 1
-            prod_mat(A, B)  
-            imprimeMatriz(A)  
-"""
+    print("C: ")
+    C = soma_mat(A, B)
+    imprimeMatriz(C)
+
+    #Funcao E de 1
+    mult_escalar_mat(A)
+    imprimeMatriz(A)
+
+    #Funcao F de 1
+    prod_mat(A, B)  
+    imprimeMatriz(A) 
+
 main()
 
-"""
+
 #############################################
 
 
@@ -177,4 +196,3 @@ forma_escalonada()
 #Funcao de 7
 
 determinante()
-"""
