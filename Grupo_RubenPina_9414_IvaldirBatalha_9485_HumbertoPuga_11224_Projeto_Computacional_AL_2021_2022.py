@@ -5,9 +5,10 @@ import numpy as np
 #--------------------------Exercicio 1------------------------------
 
 #Alinea A de 1
+
 def transposta(A):
     return 
-    oiahbvoqvioqbe9beuicvnber0ubvsfhivehcbjhbywb
+
 #Alinea B de 1
 
 def traco():
