@@ -7,7 +7,7 @@ import numpy as np
 #Alinea A de 1
 def transposta(A):
     return 
-    
+    oiahbvoqvioqbe9beuicvnber0ubv
 #Alinea B de 1
 
 def traco():
