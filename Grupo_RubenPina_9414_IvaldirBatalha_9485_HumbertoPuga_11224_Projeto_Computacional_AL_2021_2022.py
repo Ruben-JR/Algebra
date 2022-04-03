@@ -6,7 +6,6 @@ import numpy as np
 
 #Alinea A de 1
 def transposta(A):
-    
     return 
     
 #Alinea B de 1
