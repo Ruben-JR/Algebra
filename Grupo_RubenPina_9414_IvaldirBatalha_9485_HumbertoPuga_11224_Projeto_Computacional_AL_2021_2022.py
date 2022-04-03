@@ -36,21 +36,37 @@ def prod_mat():
 
 #--------------------------Exercicio 2
 
-A = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
-B = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
-C = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
+def imprimeMatriz(M):
+    l, c = dimensao(M)
+    for i in range(l):
+        for j in range[c]:
+            print(M[i][j], end="\t")
+        print()
 
-def main(A, B, C):
+#############################################
+
+def dimensao(M):
+    l = len(M)
+    c = len(M[0])
+    if (l != 0):
+        return l, c
+    return False 
+
+def main():
+    A = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
+    B = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
+    C = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
+
     M = []
     linhas = len(M)
-    colunas = len(M[0])
+    colunas = 0
     for i in range[linhas]:
         for j in range[colunas]:
 
             #Funcao (a) de 1
-            transposta(A)
-            imprimeMatriz(A)
-
+            transposta(A[i][j])
+            imprimeMatriz(A[i][j])
+"""
             #Funcao B de 1
             traco(A)
             imprimeMatriz(A)
@@ -70,25 +86,12 @@ def main(A, B, C):
             #Funcao F de 1
             prod_mat(A, B)  
             imprimeMatriz(A)  
+"""
+main()
 
-
+"""
 #############################################
 
-def imprimeMatriz(M):
-    l, c = dimensao(M)
-    for i in range(l):
-        for j in range[c]:
-            print(M[i][j], end="\t")
-        print()
-
-#############################################
-
-def dimensao(M):
-    l = len(M)
-    c = len(M[0])
-    if (l != 0):
-        return l, c
-    return False 
 
 #--------------------------Exercicio_3_4
 #--------------------------Exercicio 3
@@ -174,3 +177,4 @@ forma_escalonada()
 #Funcao de 7
 
 determinante()
+"""
