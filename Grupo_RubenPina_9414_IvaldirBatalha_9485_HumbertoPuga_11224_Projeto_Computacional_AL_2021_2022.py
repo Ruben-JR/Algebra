@@ -1,8 +1,5 @@
 import numpy as np
 
-#--------------------------Exercicio_1_2----------------------------
-#--------------------------Exercicio 1------------------------------
-
 def matrizNula(l, c):
     M = []
     for i in range(l):
@@ -10,7 +7,11 @@ def matrizNula(l, c):
         M.append(l)
     return M
 
+#--------------------------Exercicio_1_2----------------------------
+#--------------------------Exercicio 1------------------------------
+
 #Alinea A de 1
+
 def transposta(mA):
     l = len(mA)
     c = len(mA[0])
@@ -31,6 +32,7 @@ def traco_secundaria():
     return
 
 #Alinea D de 1
+
 def soma_mat(mA, mB):
     mS = []
     lA, lB = len(mA), len(mB)
@@ -54,8 +56,9 @@ def mult_escalar_mat():
 def prod_mat():
     return
 
-#--------------------------Exercicio 2
 #############################################
+
+#--------------------------Exercicio 2
 
 def main():
     mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
@@ -67,19 +70,19 @@ def main():
     transposta(mA)
 
     #Funcao B de 1
-    #traco(mA)
+    traco(mA)
 
     #Funcao C de 1
-    #traco_secundaria(mA)
+    traco_secundaria(mA)
 
     #Funcao D de 1
     soma_mat(mA, mB)
 
     #Funcao E de 1
-    #mult_escalar_mat(mA)
+    mult_escalar_mat(mA)
     
     #Funcao F de 1
-    #prod_mat(mA, mB)
+    prod_mat(mA, mB)
 
 #########################################    
 
@@ -90,52 +93,91 @@ main()
 #--------------------------Exercicio_3_4
 #--------------------------Exercicio 3
 #Algoritmo 1 de 3
+
 def forma_escalonada():
     return
+
 #Algoritmo 2 de 3
+
 def forma_escalonada_reduzida_por_linha():
     return
+
 #Alinea (a) de 3
+
 def primeira_col_nao_nula():
     return
+
 #Alinea (b) de 3
+
 def troca_linhas():
     return
+
 #Alinea (c) de 3
+
 def cria_zeros():
     return
+
 #Alinea (d) de 3
+
 def elimina_linha_1():
     return
+
 #Alinea (e) de 3
+
 def forma_escalonada():
     return
+
 #Alinea (f) de 3
+
 def  forma_escalonada_reduzida():
     return
+
 #Alinea (g) de 3
+
 def gauss_jordan():
     return
+
+#########################################
+
 #--------------------------Exercicio 4
+
 gauss_jordan()
+
+#########################################
+
 #--------------------------Exercicio_5_6
 #--------------------------Exercicio 5
 #Alinea (a) de 5
+
 def posto():
     return
+
 #Alinea (b) de 5
+
 def sistema_eq_linear():
     return
+
+#########################################
 #--------------------------Exercicio 6
 #Funcao (a) de 5
+
 posto()
+
 #Funcao (b) de 5
+
 sistema_eq_linear()
+
+#########################################
 #--------------------------Exercicio_7_8
 #Exercicio 7
+
 def determinante():
     return
+
 forma_escalonada()
+
+#########################################
 #Exercicio 8
 #Funcao de 7
+
 determinante()
