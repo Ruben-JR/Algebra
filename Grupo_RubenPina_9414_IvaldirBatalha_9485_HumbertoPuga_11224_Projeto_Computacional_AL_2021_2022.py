@@ -20,6 +20,16 @@ def transposta(mA):
             mT[j][i] = mA[i][j] 
     print("\nTranposta de A\n", mA)
 
+#Alinea B de 1
+
+def traco():
+    return 
+
+#Alinea C de 1
+
+def traco_secundaria():
+    return
+
 #Alinea D de 1
 def soma_mat(mA, mB):
     mS = []
@@ -34,6 +44,16 @@ def soma_mat(mA, mB):
         print("\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
     print(mS)
        
+#Alinea E de 1
+
+def mult_escalar_mat():
+    return
+
+#Alinea F de 1
+
+def prod_mat():
+    return
+    
 #--------------------------Exercicio 2
 #############################################
 
