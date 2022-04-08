@@ -13,6 +13,12 @@ def matrizNula(l, c):
 #Alinea A de 1
 
 def transposta(mA):
+    l = len(mA)
+    c = len(mA[0])
+    mT = matrizNula(c, l)
+    for i in range(l):
+        for j in range(c):
+            mT[j][i] = mA[i][j]
     print("\nTranposta de A\n", mA)
 
 #Alinea B de 1
