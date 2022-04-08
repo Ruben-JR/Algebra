@@ -15,20 +15,20 @@ def matrizNula(l, c):
 def transposta(mA):
     l = len(mA)
     c = len(mA[0])
-    mT = matrizNula(c, l)
+    mT = matrizNula(l, c)
     for i in range(l):
         for j in range(c):
             mT[j][i] = mA[i][j]
-    print("\nTranposta de A\n", mA)
+    print("\nTranposta de A\n", np.array(mT))
 
 #Alinea B de 1
 
-def traco():
+def traco(mA):
     return 
 
 #Alinea C de 1
 
-def traco_secundaria():
+def traco_secundaria(mA):
     return
 
 #Alinea D de 1
@@ -42,18 +42,18 @@ def soma_mat(mA, mB):
         for i in range(lA):
             for j in range(cA):
                 mS[i][j] = mA[i][j] + mB[i][j]
+        print("\nA soma de A com B\n", np.array(mS))
     else:
         print("\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
-    print(mS)
        
 #Alinea E de 1
 
-def mult_escalar_mat():
+def mult_escalar_mat(mA):
     return
 
 #Alinea F de 1
 
-def prod_mat():
+def prod_mat(mA, mB):
     return
 
 #############################################
@@ -62,7 +62,8 @@ def prod_mat():
 
 def main():
     mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
-    mB = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
+    mB = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
+    #mB = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
     mC = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
     print(mA, "\n\n", mB, "\n\n", mC)
     
