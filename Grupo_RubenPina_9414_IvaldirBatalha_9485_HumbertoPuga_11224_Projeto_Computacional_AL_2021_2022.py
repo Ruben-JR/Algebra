@@ -64,7 +64,7 @@ def main():
     mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
     mB = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
     mC = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
-    print(mA, "\n\n", mB, "\n\n", mC)
+    print("\nMatrizes do exercicio 2\n", "\nMatriz A\n", mA, "\n", "\nMatriz B\n", mB, "\n", "\nMatriz C\n", mC)
     
     #Funcao A de 1
     transposta(mA)
@@ -93,10 +93,18 @@ main()
 #--------------------------Exercicio_3_4
 #--------------------------Exercicio 3
 #Algoritmo 1 de 3
-
-def forma_escalonada():
-    return
-
+"""
+def forma_escalonada(mA):
+    mE = []
+    l = len(mA)
+    c = len(mA[0])
+    for j in range(c):
+        if(j != 0):
+            j = j[0]
+            if(j != 0):
+                j = c[0]
+                print("\nMatriz A na forma escalonada\n", np.array(mE))
+"""
 #Algoritmo 2 de 3
 
 def forma_escalonada_reduzida_por_linha():
@@ -134,14 +142,35 @@ def  forma_escalonada_reduzida():
 
 #Alinea (g) de 3
 
-def gauss_jordan():
+def gauss_jordan(mA, mB, mC):
     return
 
 #########################################
 
-#--------------------------Exercicio 4
+def main():
+    mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
+    print("\nMatriz A\n", mA)
 
-gauss_jordan()
+    #forma_escalonada(mA)
+
+#########################################
+
+main()
+
+#########################################
+
+#--------------------------Exercicio 4
+def main():
+    mA = np.array([[1, 2, 3, 1], [1, 3, 4, 2], [2, 6, 7, 3]])
+    mB = np.array([[1, 2, 3, 1, 0, 0], [1, 3, 4, 0, 1, 0], [2, 4, 7, 0, 0, 1]])
+    mC = np.array([[1, 1, -2, 4, 5], [2, 2, -3, 1, 3], [3, 3, -4, -2, 1]])
+    print("\nMatrizes do exercicio 4\n", "\nMatriz A\n", mA, "\n", "\nMatriz B\n", mB, "\n", "\nMatriz C\n", mC)
+
+    gauss_jordan(mA, mB, mC)
+
+#########################################
+
+main()
 
 #########################################
 
@@ -161,7 +190,21 @@ def sistema_eq_linear():
 #--------------------------Exercicio 6
 #Funcao (a) de 5
 
-posto()
+def main():
+    mA = np.array([[1, 2, 3], [1, 3, 4], [2, 4, 7]])
+    b = np.array([[1], [2], [3]])
+    mB = np.array([[1, 1, -2, 4], [2, 2, -3, 1], [3, 3, -4, -2]])
+    
+    mC = np.array([[1, 1, 1], [1, 1, 2], [2, 2, 1]])
+    print("\nMatrizes do exercicio 6\n", "\nMatriz A\n", mA, "\n\nMatriz B\n", mB, "\n\nMatriz C\n", mC)
+    
+    posto()
+
+#########################################
+
+main()
+
+#########################################
 
 #Funcao (b) de 5
 
