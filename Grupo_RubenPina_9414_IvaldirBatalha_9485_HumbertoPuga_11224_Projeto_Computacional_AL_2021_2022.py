@@ -13,13 +13,13 @@ def matrizNula(l, c):
 #Alinea A de 1
 
 def transposta(mA):
-    l = len(mA)
-    c = len(mA[0])
+    l  = len(mA)
+    c  = len(mA[0])
     mT = matrizNula(l, c)
     for i in range(l):
         for j in range(c):
             mT[j][i] = mA[i][j]
-    print("\nTranposta de A\n", np.array(mT))
+    print("\nExercicio 1-a)\nTranposta de A\n", np.array(mT))
 
 #Alinea B de 1
 
@@ -34,17 +34,17 @@ def traco_secundaria(mA):
 #Alinea D de 1
 
 def soma_mat(mA, mB):
-    mS = []
+    mS     = []
     lA, lB = len(mA), len(mB)
     cA, cB = len(mA[0]), len(mB[0])
-    mS = matrizNula(lA, cA)
+    mS     = matrizNula(lA, cA)
     if(lA == lB) and (cA == cB):
         for i in range(lA):
             for j in range(cA):
                 mS[i][j] = mA[i][j] + mB[i][j]
-        print("\nA soma de A com B\n", np.array(mS))
+        print("\nExercicio 1-d)\nA soma de A com B\n", np.array(mS))
     else:
-        print("\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
+        print("\nExercicio 1-D\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
        
 #Alinea E de 1
 
@@ -93,18 +93,18 @@ main()
 #--------------------------Exercicio_3_4
 #--------------------------Exercicio 3
 #Algoritmo 1 de 3
-"""
+
 def forma_escalonada(mA):
     mE = []
-    l = len(mA)
-    c = len(mA[0])
+    l  = len(mA)
+    c  = len(mA[0])
     for j in range(c):
         if(j != 0):
             j = j[0]
             if(j != 0):
                 j = c[0]
                 print("\nMatriz A na forma escalonada\n", np.array(mE))
-"""
+
 #Algoritmo 2 de 3
 
 def forma_escalonada_reduzida_por_linha():
@@ -149,9 +149,31 @@ def gauss_jordan(mA, mB, mC):
 
 def main():
     mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
-    print("\nMatriz A\n", mA)
+    print("\nMatrizes do exercicio 3\nMatriz A\n", mA)
+    
+    #Algoritmo 1 de 3
+    forma_escalonada(mA)
 
-    #forma_escalonada(mA)
+    #Algoritmo 2 de 3
+    forma_escalonada_reduzida_por_linha(mA)
+
+    #Alinea (a) de 3
+    primeira_col_nao_nula()
+    
+    #Alinea (b) de 3
+    troca_linhas()
+    
+    #Alinea (c) de 3
+    cria_zeros()
+    
+    #Alinea (d) de 3
+    elimina_linha_1()
+    
+    #Alinea (e) de 3
+    forma_escalonada()
+    
+    #Alinea (f) de 3
+    forma_escalonada_reduzida()
 
 #########################################
 
@@ -160,19 +182,8 @@ main()
 #########################################
 
 #--------------------------Exercicio 4
-def main():
-    mA = np.array([[1, 2, 3, 1], [1, 3, 4, 2], [2, 6, 7, 3]])
-    mB = np.array([[1, 2, 3, 1, 0, 0], [1, 3, 4, 0, 1, 0], [2, 4, 7, 0, 0, 1]])
-    mC = np.array([[1, 1, -2, 4, 5], [2, 2, -3, 1, 3], [3, 3, -4, -2, 1]])
-    print("\nMatrizes do exercicio 4\n", "\nMatriz A\n", mA, "\n", "\nMatriz B\n", mB, "\n", "\nMatriz C\n", mC)
 
-    gauss_jordan(mA, mB, mC)
 
-#########################################
-
-main()
-
-#########################################
 
 #--------------------------Exercicio_5_6
 #--------------------------Exercicio 5
@@ -188,27 +199,24 @@ def sistema_eq_linear():
 
 #########################################
 #--------------------------Exercicio 6
-#Funcao (a) de 5
 
 def main():
     mA = np.array([[1, 2, 3], [1, 3, 4], [2, 4, 7]])
-    b = np.array([[1], [2], [3]])
+    b  = np.array([[1], [2], [3]])
     mB = np.array([[1, 1, -2, 4], [2, 2, -3, 1], [3, 3, -4, -2]])
     
     mC = np.array([[1, 1, 1], [1, 1, 2], [2, 2, 1]])
     print("\nMatrizes do exercicio 6\n", "\nMatriz A\n", mA, "\n\nMatriz B\n", mB, "\n\nMatriz C\n", mC)
     
+    #Funcao (a) de 5
     posto()
+
+    #Funcao (b) de 5
+    sistema_eq_linear()
 
 #########################################
 
 main()
-
-#########################################
-
-#Funcao (b) de 5
-
-sistema_eq_linear()
 
 #########################################
 #--------------------------Exercicio_7_8
