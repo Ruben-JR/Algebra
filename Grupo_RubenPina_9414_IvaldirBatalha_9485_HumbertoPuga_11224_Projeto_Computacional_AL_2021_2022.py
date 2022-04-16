@@ -29,6 +29,17 @@ def traco(mA):
 #Alinea C de 1
 
 def traco_secundaria(mA):
+    sv = 0
+    la = len(mA)
+    ca = len(mA[0])
+    if la != ca:
+        print("\nNão é possivel calcular o traço\n")
+    else:
+        for i in range(la):
+            for j in range(la):
+                if i + j == la - 1:
+                    sv += mA[i][j]
+    print("O traço secundario e:", sv)
     return
 
 #Alinea D de 1
@@ -54,6 +65,15 @@ def mult_escalar_mat(mA):
 #Alinea F de 1
 
 def prod_mat(mA, mB):
+    mr = matrizNula(len(mA), len(mB[0]))
+    if len(mA[0]) != len(mB):
+        print("\n Não é possivel multiplicar as matrizes\n")
+    else:
+        for i in range(len(mA)):
+            for j in range(len(mB[0])):
+                for k in range(len(mA[0])):
+                    mr[i][j] += mA[i][k] * mB[k][j]
+        print("A matriz resulante é:", mr)
     return
 
 #############################################
