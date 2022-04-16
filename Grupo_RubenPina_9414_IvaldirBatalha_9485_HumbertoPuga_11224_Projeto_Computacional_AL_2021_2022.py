@@ -39,7 +39,7 @@ def traco_secundaria(mA):
             for j in range(la):
                 if i + j == la - 1:
                     sv += mA[i][j]
-    print("O traço secundario e:", sv)
+    print("\nO traço secundario e:", np.array(sv))
     return
 
 #Alinea D de 1
@@ -73,7 +73,7 @@ def prod_mat(mA, mB):
             for j in range(len(mB[0])):
                 for k in range(len(mA[0])):
                     mr[i][j] += mA[i][k] * mB[k][j]
-        print("A matriz resulante é:", mr)
+        print("\nA matriz resulante é\n",np.array(mr))
     return
 
 #############################################
