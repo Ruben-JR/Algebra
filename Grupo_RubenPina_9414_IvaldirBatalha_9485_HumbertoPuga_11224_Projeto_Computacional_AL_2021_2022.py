@@ -147,18 +147,6 @@ def cria_zeros():
 def elimina_linha_1(mA):
     print()
 
-def main():
-    mA = np.array ([[8, 9, 6], [8, 6, 5], [2, 1, 1]])
-    print("\nMatriz de coluna nula\n\n", mA)
-    
-    elimina_linha_1(mA)
-
-#########################################    
-
-main()
-
-#########################################
-
 #Alinea (e) de 3
 
 def forma_escalonada():
