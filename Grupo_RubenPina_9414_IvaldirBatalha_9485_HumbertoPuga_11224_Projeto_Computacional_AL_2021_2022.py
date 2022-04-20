@@ -11,7 +11,6 @@ def matrizNula(l, c):
 #--------------------------Exercicio 1------------------------------
 
 #Alinea A de 1
-
 def transposta(mA):
     l = len(mA)
     c = len(mA[0])
@@ -19,7 +18,7 @@ def transposta(mA):
     for i in range(l):
         for j in range(c):
             mT[j][i] = mA[i][j]
-    print("\nTranposta de A\n", np.array(mT))
+    print("\nExercicio 1-a)\nTranposta de A\n", np.array(mT))
 
 #Alinea B de 1
 
@@ -33,13 +32,13 @@ def traco_secundaria(mA):
     la = len(mA)
     ca = len(mA[0])
     if la != ca:
-        print("\nNão é possivel calcular o traço\n")
+        print("\nExercicio 1-c)\nNão é possivel calcular o traço\n")
     else:
         for i in range(la):
             for j in range(la):
                 if i + j == la - 1:
                     sv += mA[i][j]
-    print("\nO traço secundario e:", np.array(sv))
+    print("\nExercicio 1-c)\nO traço secundario e:", np.array(sv))
     return
 
 #Alinea D de 1
@@ -53,9 +52,9 @@ def soma_mat(mA, mB):
         for i in range(lA):
             for j in range(cA):
                 mS[i][j] = mA[i][j] + mB[i][j]
-        print("\nA soma de A com B\n", np.array(mS))
+        print("\nExercicio 1-d)\nA soma de A com B\n", np.array(mS))
     else:
-        print("\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
+        print("\nExercicio 1-d)\nSoma impossivel\nMatriz A tem tamanho diferente de B")   
        
 #Alinea E de 1
 
@@ -67,13 +66,13 @@ def mult_escalar_mat(mA):
 def prod_mat(mA, mB):
     mr = matrizNula(len(mA), len(mB[0]))
     if len(mA[0]) != len(mB):
-        print("\n Não é possivel multiplicar as matrizes\n")
+        print("\nExercicio 1-f)\nNão é possivel multiplicar as matrizes\n")
     else:
         for i in range(len(mA)):
             for j in range(len(mB[0])):
                 for k in range(len(mA[0])):
                     mr[i][j] += mA[i][k] * mB[k][j]
-        print("\nA matriz resulante é\n",np.array(mr))
+        print("\nExercicio 1-f)\nA matriz resulante é\n",np.array(mr))
     return
 
 #############################################
@@ -84,7 +83,7 @@ def main():
     mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
     mB = np.array ([[1, 2, 3, 1, -5, 6], [1, 3, 4, -2, 1, 8], [2, 4, 7, 3, 4, 1]])
     mC = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
-    print(mA, "\n\n", mB, "\n\n", mC)
+    print("\nMatrizes do exercicio 2\n\n", mA, "\n\n", mB, "\n\n", mC)
     
     #Funcao A de 1
     transposta(mA)
@@ -124,8 +123,14 @@ def forma_escalonada_reduzida_por_linha():
 
 #Alinea (a) de 3
 
-def primeira_col_nao_nula():
-    return
+def primeira_col_nao_nula(mA):
+    l = len(mA)
+    c = len(mA[0])
+    for i in range(l):
+        for j in range(c):
+            if(mA[i][j] != 0):
+                print("\n", mA[i][j])
+                break
 
 #Alinea (b) de 3
 
@@ -139,8 +144,20 @@ def cria_zeros():
 
 #Alinea (d) de 3
 
-def elimina_linha_1():
-    return
+def elimina_linha_1(mA):
+    print()
+
+def main():
+    mA = np.array ([[8, 9, 6], [8, 6, 5], [2, 1, 1]])
+    print("\nMatriz de coluna nula\n\n", mA)
+    
+    elimina_linha_1(mA)
+
+#########################################    
+
+main()
+
+#########################################
 
 #Alinea (e) de 3
 
@@ -191,13 +208,24 @@ sistema_eq_linear()
 #--------------------------Exercicio_7_8
 #Exercicio 7
 
-def determinante():
+def determinante(mA, mB, mC):
+    forma_escalonada()
     return
 
-forma_escalonada()
 
 #########################################
 #Exercicio 8
-#Funcao de 7
+def main():
+    mA = np.array ([[1, 2, 3], [1, 3, 4], [2, 6, 7]])
+    mB = np.array ([[1 , 3, -5, 0], [1, 3, 8, 6], [2, 4, 1, 9], [0, -1, 2, -3]])
+    mC = np.array ([[1, 3, 4, -2, 1, 8], [8, -2, 7, 1, -5, 6], [1, 3, 4, -2, 1, -9], [-6, 4, 7, 3, -2, 1], [1, 9, 3, 1, -5, 6], [-4, 4, 1, 3, -7, 1]])
+    print("\nMatrizes do exercicio 8\n\n", mA, "\n\n", mB, "\n\n", mC)
 
-determinante()
+    #Funcao de 7
+    determinante(mA, mB, mC) 
+
+#########################################    
+
+main()
+
+#########################################
