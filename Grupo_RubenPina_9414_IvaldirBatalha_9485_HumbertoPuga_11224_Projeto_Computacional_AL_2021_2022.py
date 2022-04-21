@@ -135,6 +135,7 @@ def primeira_col_nao_nula(mA):
 #Alinea (b) de 3
 
 def troca_linhas():
+    
     return
 
 #Alinea (c) de 3
