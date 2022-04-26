@@ -1,4 +1,5 @@
 import numpy as np
+from sqlalchemy import true
 
 def matrizNula(l, c):
     M = []
@@ -58,8 +59,11 @@ def soma_mat(mA, mB):
        
 #Alinea E de 1
 
-def mult_escalar_mat(mA):
-    return
+def mult_escalar_mat(mA, a):
+    mr = matrizNula(len(mA), len(mA[0]))
+    for i in range(len(mA)):   
+        mr[i] = mA[i] * a
+    print("\nExercicio 1-E\nMatriz resultante é\n\n", np.array(mr))
 
 #Alinea F de 1
 
@@ -73,7 +77,6 @@ def prod_mat(mA, mB):
                 for k in range(len(mA[0])):
                     mr[i][j] += mA[i][k] * mB[k][j]
         print("\nExercicio 1-f)\nA matriz resulante é\n",np.array(mr))
-    return
 
 #############################################
 
@@ -98,7 +101,7 @@ def main():
     soma_mat(mA, mB)
 
     #Funcao E de 1
-    mult_escalar_mat(mA)
+    mult_escalar_mat(mA, 2)
     
     #Funcao F de 1
     prod_mat(mA, mB)
@@ -111,63 +114,109 @@ main()
 
 #--------------------------Exercicio_3_4
 #--------------------------Exercicio 3
-#Algoritmo 1 de 3
-
-def forma_escalonada():
-    return
-
-#Algoritmo 2 de 3
-
-def forma_escalonada_reduzida_por_linha():
-    return
-
 #Alinea (a) de 3
 
 def primeira_col_nao_nula(mA):
     l = len(mA)
     c = len(mA[0])
-    for i in range(l):
-        for j in range(c):
-            if(mA[i][j] != 0):
-                print("\n", mA[i][j])
+    for j in range(c):
+        for i in range(l):
+            if(mA[i][j] != 0): 
+                k = j
                 break
+        if(mA[i][j] != 0):
+            break
+    for i in range(l):
+        return True
 
 #Alinea (b) de 3
 
-def troca_linhas():
-    
-    return
-
+def troca_linhas(mA):
+    l = len(mA)
+    c = len(mA[0])
+    aux = matrizNula(1, c)
+    if all(mA[0] == 0):
+        aux[0] = mA[[0]]
+        mA[[0]] = mA[[2]]
+        mA[[2]] = aux[0]
+    elif (mA[0][0] == 0):
+        aux[0] = mA[[0]]
+        mA[[0]] = mA[[1]]
+        mA[[1]] = aux[0]
+    return(mA)
+                 
 #Alinea (c) de 3
 
-def cria_zeros():
-    return
+def cria_zeros(mA):
+    for i in range(len(mA)-1): 
+        for j in range(1, len(mA)-i):       
+            if mA[i][i] != 0:
+                m = mA[j+i][i] / mA[i][i]
+                for k in range(len(mA[0])):                                     
+                    mA[j+i][k] = mA[j+i][k] -  (mA[i][k] * m)
+    return mA
 
 #Alinea (d) de 3
 
 def elimina_linha_1(mA):
-    print()
+    l = len(mA)
+    c = len(mA[0])
+    print("\nExercicio d-3\n")
+    if all(mA[0]!= 0):
+        mA = np.delete(mA,(0), axis = 0)
+        return mA
 
 #Alinea (e) de 3
 
-def forma_escalonada():
-    return
+def forma_escalonada(mA):
+    print("\nExercicio 3-e)\nForma escalonada\n")
+    primeira_col_nao_nula(mA)
+    troca_linhas(mA)
+    cria_zeros(mA)
+    print(mA)
+   
 
 #Alinea (f) de 3
 
-def  forma_escalonada_reduzida():
-    return
+def forma_escalonada_reduzida(mA):
+    print("\nExercicio 3-f)\nForma escalonada reduzida por linha\n")
+    l = len(mA)
+    c = len(mA[0])
+    for i in range(l):
+        if(mA[i][i] != 1):
+            mA[i] = mA[i] / mA[i][i]
+        #for j in range(c):
+        #    if(mA[i - 1][j] != 0 and not(mA[i][i])):
+        #        mA[i][j] = mA[i][j] * 
+    print(mA)
 
 #Alinea (g) de 3
 
-def gauss_jordan():
+def gauss_jordan(mA, mB, mC):
     return
 
 #########################################
 
 #--------------------------Exercicio 4
+def main():
+    mA = np.array([[1, 2, 3, 1], [1, 3, 4, 2], [2, 6, 7, 3]])
+    mB = np.array([[1, 2, 3, 1, 0, 0], [1, 3, 4, 0, 1, 0], [2, 4, 7, 0, 0, 1]])
+    mC = np.array([[1, 1, -2, 4, 5], [2, 2, -3, 1, 3], [3, 3, -4, -2, 1]])
+    print("\nMatrizes do exercicio 4\n\n", mA, "\n\n", mB, "\n\n", mC)
 
-gauss_jordan()
+    #Funcao (e) de 3
+    forma_escalonada(mA)
+
+    #Funcao (f) de 3
+    forma_escalonada_reduzida(mA)
+
+    #Funcao (g) de 3
+    gauss_jordan(mA, mB, mC)
+#########################################    
+
+main()
+
+#########################################
 
 #########################################
 
@@ -185,22 +234,32 @@ def sistema_eq_linear():
 
 #########################################
 #--------------------------Exercicio 6
-#Funcao (a) de 5
+def main():
+    mA = np.array([[], [], []])
+    mB = np.array([[], [], []])
+    mC = np.array([[], [], []])
+    print("\nMatrizes do exercicio 6\n\n", mA, "\n\n", mB, "\n\n", mC)
+    
+    #Funcao (a) de 5
+    posto()
 
-posto()
-
-#Funcao (b) de 5
-
-sistema_eq_linear()
+    #Funcao (b) de 5
+    sistema_eq_linear()
 
 #########################################
 #--------------------------Exercicio_7_8
 #Exercicio 7
 
-def determinante(mA, mB, mC):
-    forma_escalonada()
-    return
-
+def determinante(mA):
+    l = len(mA)
+    print("\nExercicio 7\nDeterminante\n")
+    forma_escalonada(mA)
+    #forma_escalonada(mB)
+    #forma_escalonada(mC)
+    deter = 1     
+    for i in range (l):         
+        deter = mA[i][i] * deter     
+    print("\nO determinante da matriz é = ", deter)
 
 #########################################
 #Exercicio 8
@@ -211,7 +270,7 @@ def main():
     print("\nMatrizes do exercicio 8\n\n", mA, "\n\n", mB, "\n\n", mC)
 
     #Funcao de 7
-    determinante(mA, mB, mC) 
+    determinante(mA) 
 
 #########################################    
 
